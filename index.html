@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BugBlock - Personal Bug Report System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg: #18181b;
+            --surface: #232329;
+            --accent: #6366f1;
+            --text: #f4f4f5;
+            --muted: #a1a1aa;
+            --border: #27272a;
+            --radius: 12px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.12);
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            width: 100%;
+            max-width: 700px;
+            margin: 48px auto 0;
+            background: var(--surface);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 32px 40px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -2px;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: var(--muted);
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+        }
+        .cta-btn {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(99,102,241,0.12);
+        }
+        .cta-btn:hover {
+            background: #4f46e5;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            margin: 48px 0 0 0;
+            max-width: 900px;
+        }
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 28px 24px;
+            flex: 1 1 260px;
+            min-width: 260px;
+            max-width: 320px;
+            text-align: left;
+            transition: border 0.2s;
+        }
+        .feature-card:hover {
+            border-color: var(--accent);
+        }
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--accent);
+        }
+        .feature-desc {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+        footer {
+            margin: 48px 0 16px 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+            text-align: center;
+        }
+        @media (max-width: 700px) {
+            header {
+                padding: 24px 12px;
+            }
+            .features {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🐞 BugBlock</div>
+        <div class="subtitle">
+            Your personal bug tracker, supercharged.<br>
+            Inspired by GitHub, Stack Overflow, and daily.dev.
+        </div>
+        <button class="cta-btn">Get Started</button>
+    </header>
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-title">GitHub-style Issues</div>
+            <div class="feature-desc">
+                Create, label, and manage bug reports with markdown support and status tracking.
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-title">Stack Overflow Discussions</div>
+            <div class="feature-desc">
+                Comment, upvote, and discuss bugs and solutions with a Q&A workflow.
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-title">Superpowers</div>
+            <div class="feature-desc">
+                Fast search, keyboard shortcuts, and customizable views for productivity.
+            </div>
+        </div>
+    </section>
+    <footer>
+        &copy; 2024 BugBlock. Made for personal productivity.
+    </footer>
+</body>
+</html>
